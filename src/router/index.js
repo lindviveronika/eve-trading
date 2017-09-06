@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Login from '@/components/Login';
-import Trading from '@/components/Trading';
 import SoldOutItemsList from '@/components/SoldOutItemsList';
 
 Vue.use(VueRouter);

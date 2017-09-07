@@ -18,7 +18,6 @@
 </style>
 
 <script>
-
     export default {
         created() {
             this.tabs = this.$children
@@ -40,5 +39,4 @@
             }
         }
     }
-    
 </script>

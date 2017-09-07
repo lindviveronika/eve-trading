@@ -3,7 +3,7 @@ function getQueryString(field) {
     var reg = new RegExp( '[#|&]' + field + '=([^&#]*)', 'i' );
     var string = reg.exec(href);
     return string ? string[1] : null;
-};
+}
 
 function getAccessToken() {
     return getQueryString('access_token');

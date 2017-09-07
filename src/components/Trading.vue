@@ -1,6 +1,5 @@
 <template>
     <tabs>
-
         <tab id="soldOutOrders" title="Sold out orders" :selected="true">
             <h1>Sold Out Orders</h1>
             <soldOutItemsList></soldOutItemsList>
@@ -13,7 +12,6 @@
         <tab id="findPotentialProfit" title="Find potential profit">
             <h1>Find potential profit of item</h1>
         </tab>
-
     </tabs>
 </template>
 
@@ -23,7 +21,6 @@
 <script>
     import Tabs from '@/components/Tabs';
     import Tab from '@/components/Tab';
-
     import SoldOutItemsList from '@/components/SoldOutItemsList';
 
     export default {

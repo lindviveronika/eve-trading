@@ -1,7 +1,6 @@
 <template>
     <div>
-        <h2>Sold out items</h2>
-        <table id="soldOutItemsList">
+        <table>
             <thead>
                 <th></th>
                 <th>Item Name</th>

@@ -12,6 +12,7 @@
 
         <tab id="findPotentialProfit" title="Find potential profit">
             <h1>Find potential profit of item</h1>
+            <findPotentialProfit></findPotentialProfit>
         </tab>
     </tabs>
 </template>
@@ -24,13 +25,15 @@
     import Tab from '@/components/Tab';
     import SoldOutItemsList from '@/components/SoldOutItemsList';
     import PriceChangeItemsList from '@/components/PriceChangeItemsList';
+    import FindPotentialProfit from '@/components/FindPotentialProfit';
 
     export default {
         components: {
             Tabs,
             Tab,
             SoldOutItemsList,
-            PriceChangeItemsList
+            PriceChangeItemsList,
+            FindPotentialProfit
         }
     }
 </script>

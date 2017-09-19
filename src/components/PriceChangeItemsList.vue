@@ -72,8 +72,8 @@ export default {
 
             return {
                 ...order,
-                competingPrice: competingOrderWithLowestPrice.price,
-                competingVolumeRemaining: competingOrderWithLowestPrice.volume_remain
+                competingPrice: competingOrderWithLowestPrice ? competingOrderWithLowestPrice.price : undefined,
+                competingVolumeRemaining: competingOrderWithLowestPrice ? competingOrderWithLowestPrice.volume_remain: undefined
             };
         },
 

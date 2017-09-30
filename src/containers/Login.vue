@@ -7,9 +7,13 @@
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
     h1 {
         color: orange;
+    }
+
+    button {
+        background-color: blue;
     }
 </style>
 

@@ -49,10 +49,12 @@ export default {
         profit() {
             return this.sellPrice ? this.sellPrice - this.buyPrice : '';
         },
+
         profitMargin() {
             return calculateProfitMargin(this.sellPrice, this.buyPrice);
         }
     },
+
     data() {
         return {
             sellPrice: undefined,
@@ -61,6 +63,7 @@ export default {
             itemName: ''
         }
     },
+
     methods: {
         resetData() {
             this.feedbackMessage = '';
@@ -133,6 +136,7 @@ export default {
             }
         }
     },
+
     name: 'findPotentialProfit'
 }
 </script>

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Login from '@/components/Login';
-import Trading from '@/components/Trading';
+import Login from '@/containers/Login';
+import Trading from '@/containers/Trading';
 
 Vue.use(VueRouter);
 

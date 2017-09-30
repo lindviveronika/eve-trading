@@ -1,7 +1,7 @@
 <template>
     <div>
-        <ul>
-            <li v-for="tab in tabs" v-on:click="selectTab(tab)" :key="tab.id" :class="{ isActive: tab.isActive }">
+        <ul class="tab-container">
+            <li v-for="tab in tabs" v-on:click="selectTab(tab)" :key="tab.id" :class="{ isActive: tab.isActive, tab }">
                 {{ tab.title }}
             </li>
         </ul>
@@ -10,9 +10,30 @@
     </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
+    .tab-container {
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        font-family: 'Audiowide', monospace;
+        letter-spacing: 1.5px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 30px;
+    }
+
+    .tab {
+        margin: 0 25px;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .tab:hover {
+        color: #00AEFF;
+    }
+
     .isActive {
-        color: red;
+        color: #00AEFF;
     }
 
 </style>

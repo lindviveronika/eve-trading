@@ -1,32 +1,72 @@
 <template>
-    <div>
-        <table>
-            <thead>
-                <th></th>
-                <th>Item Name</th>
-                <th>Nr of items to buy</th>
-                <th>Sell Price</th>
-                <th>Buy Price</th>
-                <th>Profit Margin</th>
-            </thead>
-            <tbody>
-                <soldOutItem v-for="item in soldOutItems" 
-                    :key="item.id"
-                    :item="item.data"
-                    :markAsProfitable="item.markAsProfitable"
-                    :markAsVeryProfitable="item.markAsVeryProfitable"
-                >
-                </soldOutItem>
-            </tbody>
-        </table>
+    <div class="sold-out-item-list">
+        <div class="container">
+            <table class="table">
+                <thead class="table-header">
+                    <th></th>
+                    <th>Item Name</th>
+                    <th>Nr of items to buy</th>
+                    <th>Sell Price</th>
+                    <th>Buy Price</th>
+                    <th>Profit Margin</th>
+                </thead>
+                <tbody class="table-body">
+                    <soldOutItem class="sold-out-item" v-for="item in soldOutItems" 
+                        :key="item.id"
+                        :item="item.data"
+                        :markAsProfitable="item.markAsProfitable"
+                        :markAsVeryProfitable="item.markAsVeryProfitable"
+                    >
+                    </soldOutItem>
+                </tbody>
+            </table>
+        </div>
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+    .sold-out-item-list {
+        padding: 30px;
+        font-size: 14px;
+        color: #606060;
+        font-family: 'Proxima Nova', Georgia, sans-serif;
+    }
+
+    .container {
+        width: 80%;
+        min-width: 450px;
+        margin: auto;
+        padding: 30px;
+        background-color: #fff;
+    }
+
+    .table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .table-header {
+        text-align: left;
+    }
+
+    th {
+        font-size: 16px;
+        font-weight: bold;
+        padding: 5px;
+        text-align: right;
+    }
+
+    th:nth-of-type(2) {
+        text-align: left;
+    }
+
+    .sold-out-item:nth-child(odd) {
+        background-color: #efefef;
+    }
 </style>
 
 <script>
-import SoldOutItem from '@/components/SoldOutItem';
+import SoldOutItem from '@/containers/SoldOutItem';
 
 import { getAccessToken, parseJSON, parseXml, removeDuplicates, dayDiff, calculateProfitMargin} from '@/Util';
 import {

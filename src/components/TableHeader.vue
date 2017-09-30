@@ -1,6 +1,11 @@
 <template>
     <thead class="table-header">
-        <th v-for="headerLabel in headerLabels" :key="headerLabel.label" :class="{'align-left': headerLabel.alignLeft}">
+        <th v-for="headerLabel in headerLabels"
+            :key="headerLabel.label"
+            :class="{
+                'align-left': headerLabel.alignLeft
+            }"
+        >
             {{ headerLabel.label }}
         </th>
     </thead>

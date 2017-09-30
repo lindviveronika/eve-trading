@@ -4,28 +4,25 @@
     </article>
 </template>
 
-<style>
-</style>
-
 <script>
-    export default {
-        data() {
-            return {
-                isActive: false
-            }
+export default {
+    data() {
+        return {
+            isActive: false
+        }
+    },
+
+    name: 'Tab',
+
+    props: {
+        id: { 
+            type: String,
+            required: true 
         },
-
-        name: 'Tab',
-
-        props: {
-            id: { 
-                type: String,
-                required: true 
-            },
-            title: { 
-                type: String,
-                required: true
-            }
+        title: { 
+            type: String,
+            required: true
         }
     }
+}
 </script>

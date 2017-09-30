@@ -20,34 +20,34 @@
 </template>
 
 <style lang="scss" scoped>
-    .highlighted {
-        color: #e2b100;
-    }
+.highlighted {
+    color: #e2b100;
+}
 
-    .extra-highlighted {
-        color: #27c63c;
-    }
-    
-    td {
-        padding: 5px 10px 5px 0px;
-        text-align: right;
-    }
+.extra-highlighted {
+    color: #27c63c;
+}
 
-    td:nth-of-type(2) {
-        text-align: left;
-    }
+td {
+    padding: 5px 10px 5px 0px;
+    text-align: right;
+}
 
-    button:hover {
-        svg {
-            fill: #00AEFF;
-        }
-    }
+td:nth-of-type(2) {
+    text-align: left;
+}
 
-    button:active {
-        svg {
-            fill: darken(#00AEFF, 10%);
-        }
+button:hover {
+    svg {
+        fill: #00AEFF;
     }
+}
+
+button:active {
+    svg {
+        fill: darken(#00AEFF, 10%);
+    }
+}
 </style>
 
 <script>

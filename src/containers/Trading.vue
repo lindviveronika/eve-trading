@@ -20,35 +20,35 @@
 </template>
 
 <style lang="scss" scoped>
-    .title {
-        text-align: center;
-        text-transform: uppercase;
-        font-family: 'Audiowide', monospace;
-        letter-spacing: 1.5px;
-        color: #D0A502;
-        font-weight: normal;
-        margin: 45px 0 50px 0;
-    }
+.title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Audiowide', monospace;
+    letter-spacing: 1.5px;
+    color: #D0A502;
+    font-weight: normal;
+    margin: 45px 0 50px 0;
+}
 
-    .content {
-        background-color: #EFEFEF;
-    }
+.content {
+    background-color: #EFEFEF;
+}
 </style>
 
 <script>
-    import Tabs from '@/components/Tabs';
-    import Tab from '@/components/Tab';
-    import SoldOutItemsList from '@/containers/SoldOutItemsList';
-    import PriceChangeItemsList from '@/containers/PriceChangeItemsList';
-    import FindPotentialProfit from '@/containers/FindPotentialProfit';
+import Tabs from '@/components/Tabs';
+import Tab from '@/components/Tab';
+import SoldOutItemsList from '@/containers/SoldOutItemsList';
+import PriceChangeItemsList from '@/containers/PriceChangeItemsList';
+import FindPotentialProfit from '@/containers/FindPotentialProfit';
 
-    export default {
-        components: {
-            Tabs,
-            Tab,
-            SoldOutItemsList,
-            PriceChangeItemsList,
-            FindPotentialProfit
-        }
+export default {
+    components: {
+        Tabs,
+        Tab,
+        SoldOutItemsList,
+        PriceChangeItemsList,
+        FindPotentialProfit
     }
+}
 </script>

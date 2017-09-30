@@ -11,53 +11,52 @@
 </template>
 
 <style lang="scss" scoped>
-    .tab-container {
-        display: flex;
-        justify-content: center;
-        text-transform: uppercase;
-        font-family: 'Audiowide', monospace;
-        letter-spacing: 1.5px;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 30px;
-    }
+.tab-container {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: 'Audiowide', monospace;
+    letter-spacing: 1.5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+}
 
-    .tab {
-        margin: 0 25px;
-        color: white;
-        font-size: 14px;
-        cursor: pointer;
-    }
+.tab {
+    margin: 0 25px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
 
-    .tab:hover {
-        color: #00AEFF;
-    }
+.tab:hover {
+    color: #00AEFF;
+}
 
-    .isActive {
-        color: #00AEFF;
-    }
-
+.isActive {
+    color: #00AEFF;
+}
 </style>
 
 <script>
-    export default {
-        created() {
-            this.tabs = this.$children
-        },
+export default {
+    created() {
+        this.tabs = this.$children
+    },
 
-        data() {
-            return {
-                tabs: []
-            }
-        },
+    data() {
+        return {
+            tabs: []
+        }
+    },
 
-        name: 'Tabs',
+    name: 'Tabs',
 
-        methods: {
-            selectTab(selectedTab) {
-                this.tabs.forEach(tab => {
-                    tab.isActive = selectedTab.id === tab.id;
-                });
-            }
+    methods: {
+        selectTab(selectedTab) {
+            this.tabs.forEach(tab => {
+                tab.isActive = selectedTab.id === tab.id;
+            });
         }
     }
+}
 </script>

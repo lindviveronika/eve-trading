@@ -8,13 +8,13 @@
 </template>
 
 <style lang="scss" scoped>
-    h1 {
-        color: orange;
-    }
+h1 {
+    color: orange;
+}
 
-    button {
-        background-color: blue;
-    }
+button {
+    background-color: blue;
+}
 </style>
 
 <script>

@@ -31,6 +31,11 @@
 }
 
 .content {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 210px;
     background-color: #EFEFEF;
 }
 </style>

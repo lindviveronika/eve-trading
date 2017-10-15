@@ -43,7 +43,6 @@
 
 .content {
     width: 80%;
-    min-width: 450px;
     margin: auto;
     padding: 30px;
     background-color: #fff;

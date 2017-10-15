@@ -15,11 +15,11 @@ export default {
     name: 'Tab',
 
     props: {
-        id: { 
+        id: {
             type: String,
-            required: true 
+            required: true
         },
-        title: { 
+        title: {
             type: String,
             required: true
         }

@@ -23,14 +23,6 @@
 </template>
 
 <style lang="scss" scoped>
-.container {
-    width: 80%;
-    min-width: 450px;
-    margin: auto;
-    padding: 30px;
-    background-color: #fff;
-}
-
 .table {
     border-collapse: collapse;
     width: 100%;

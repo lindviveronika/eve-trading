@@ -1,5 +1,5 @@
 <template>
-    <tr id="key" v-bind:class="{ 
+    <tr id="key" v-bind:class="{
         'highlighted': markAsProfitable,
         'extra-highlighted': markAsVeryProfitable
         }">

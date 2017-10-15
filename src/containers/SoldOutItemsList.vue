@@ -1,33 +1,16 @@
 <template>
-    <div class="sold-out-item-list">
-        <div class="container">
-            <table class="table">
-                <tableHeader :headerLabels="headerLabels"></tableHeader>
-                <tbody class="table-body">
-                    <soldOutItem class="sold-out-item" v-for="item in soldOutItems" :key="item.id" :item="item.data" :markAsProfitable="item.markAsProfitable" :markAsVeryProfitable="item.markAsVeryProfitable">
-                    </soldOutItem>
-                </tbody>
-            </table>
-        </div>
+    <div>
+        <table class="table">
+            <tableHeader :headerLabels="headerLabels"></tableHeader>
+            <tbody class="table-body">
+                <soldOutItem class="sold-out-item" v-for="item in soldOutItems" :key="item.id" :item="item.data" :markAsProfitable="item.markAsProfitable" :markAsVeryProfitable="item.markAsVeryProfitable">
+                </soldOutItem>
+            </tbody>
+        </table>
     </div>
 </template>
 
 <style lang="scss" scoped>
-.sold-out-item-list {
-    padding: 30px;
-    font-size: 14px;
-    color: #606060;
-    font-family: 'Proxima Nova', Georgia, sans-serif;
-}
-
-.container {
-    width: 80%;
-    min-width: 450px;
-    margin: auto;
-    padding: 30px;
-    background-color: #fff;
-}
-
 .table {
     border-collapse: collapse;
     width: 100%;

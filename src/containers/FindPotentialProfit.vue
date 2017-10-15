@@ -19,7 +19,7 @@
                     <td>{{ profitMargin | percentage }}</td>
                 </tr>
             </tbody>
-        </table>    
+        </table>
     </div>
 </template>
 
@@ -120,7 +120,7 @@ export default {
         async getItemIdFromItemName(itemName) {
             const response = await fetchItemIdFromName(itemName);
             const parsedReponse = parseJSON(response);
-            
+
             return parsedReponse.inventorytype;
         },
 

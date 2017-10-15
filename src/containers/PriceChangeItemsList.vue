@@ -1,37 +1,28 @@
 <template>
-    <div class="sold-out-item-list">
-        <div class="container">
-            <table>
-                <tableHeader :headerLabels="headerLabels"></tableHeader>
-                <tbody>
-                    <tr class="sold-out-item" v-for="item in itemsThatNeedsPriceChange" :key="item.typeID">
-                        <td>
-                            <button class="copy-button" v-clipboard:copy="item.name">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="#606060" height="24" viewBox="0 0 24 24" width="24">
-                                    <path d="M0 0h24v24H0z" fill="none"/>
-                                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
-                                </svg>
-                            </button>
-                        </td>
-                        <td>{{ item.name }}</td>
-                        <td>{{ item.price }}</td>
-                        <td>{{ item.competingPrice }}</td>
-                        <td>{{ item.competingVolumeRemaining }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <div>
+        <table class="table">
+            <tableHeader :headerLabels="headerLabels"></tableHeader>
+            <tbody>
+                <tr class="sold-out-item" v-for="item in itemsThatNeedsPriceChange" :key="item.typeID">
+                    <td>
+                        <button class="copy-button" v-clipboard:copy="item.name">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#606060" height="24" viewBox="0 0 24 24" width="24">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                            </svg>
+                        </button>
+                    </td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.price }}</td>
+                    <td>{{ item.competingPrice }}</td>
+                    <td>{{ item.competingVolumeRemaining }}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </template>
 
 <style lang="scss" scoped>
-.sold-out-item-list {
-    padding: 30px;
-    font-size: 14px;
-    color: #606060;
-    font-family: 'Proxima Nova', Georgia, sans-serif;
-}
-
 .container {
     width: 80%;
     min-width: 450px;
@@ -54,7 +45,7 @@ td {
     text-align: right;
 }
 
-td:nth-of-type(1) {
+td:nth-of-type(2) {
     text-align: left;
 }
 

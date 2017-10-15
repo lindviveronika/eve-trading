@@ -15,7 +15,7 @@
 th {
     font-size: 16px;
     font-weight: bold;
-    padding: 5px;
+    padding: 5px 10px 5px 0px;
     text-align: right;
 }
 

@@ -1,6 +1,7 @@
 <template>
     <div>
-        <table class="table">
+        <spinner v-show="isFetchingData"></spinner>
+        <table class="table" v-show="!isFetchingData">
             <tableHeader :headerLabels="headerLabels"></tableHeader>
             <tbody>
                 <tr class="sold-out-item" v-for="item in itemsThatNeedsPriceChange" :key="item.typeID">
@@ -58,6 +59,7 @@ button:active {
 import { parseXml, parseJSON } from '@/Util';
 import { fetchMarketOrders, fetchItemInformation, fetchMarketOrdersInRegion } from '@/ApiCalls';
 import TableHeader from '@/components/TableHeader';
+import Spinner from '@/components/Spinner';
 import Vue from 'vue';
 import VueClipBoard from 'vue-clipboard2';
 
@@ -72,11 +74,13 @@ function createLocationIdFilter(locationIds) {
 
 export default {
     components: {
-        TableHeader
+        TableHeader,
+        Spinner
     },
 
     data() {
         return {
+            isFetchingData: true,
             itemsThatNeedsPriceChange: [],
             headerLabels: [
                 { label: '' },
@@ -130,6 +134,7 @@ export default {
             const ordersWithCompetingPrice = await Promise.all(ordersWithName.map(this.getCompetingPrice));
 
             this.itemsThatNeedsPriceChange = ordersWithCompetingPrice.filter(order => order.competingPrice < order.price);
+            this.isFetchingData = false;
        }
     },
 

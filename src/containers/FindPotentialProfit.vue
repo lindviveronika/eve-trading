@@ -7,7 +7,7 @@
             </svg>
             <input class="input-field" type="text" placeholder="Search" v-model="userInput" v-on:keyup="keyUpHandler">
         </div>
-        <div v-show="isSearching">Searching...</div>
+        <spinner class="spinner" v-show="isSearching"></spinner>
         <p v-show="feedbackMessage" class="feedback-message">{{ feedbackMessage }}</p>
         <table v-show="displayResults" class="table">
             <tableHeader :headerLabels="headerLabels"></tableHeader>
@@ -70,12 +70,17 @@ td:first-of-type {
     margin-top: 30px;
     text-align: center;
 }
+
+.spinner {
+    margin-top: 15px;
+}
 </style>
 
 <script>
 import { calculateProfitMargin, parseJSON } from '@/Util';
 import { fetchItemIdFromName, fetchMarketOrdersInRegion,  } from '@/ApiCalls';
 import TableHeader from '@/components/TableHeader';
+import Spinner from '@/components/Spinner';
 
 const SELL_REGION = '10000048';
 const BUY_REGION = '10000002';
@@ -93,7 +98,8 @@ function createTypeIdFilter(typeId) {
 
 export default {
     components: {
-        TableHeader
+        TableHeader,
+        Spinner
     },
 
     computed: {

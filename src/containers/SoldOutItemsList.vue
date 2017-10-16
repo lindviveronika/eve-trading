@@ -1,6 +1,7 @@
 <template>
     <div>
-        <table class="table">
+        <spinner v-show="isFetchingData"></spinner>
+        <table class="table" v-show="!isFetchingData">
             <tableHeader :headerLabels="headerLabels"></tableHeader>
             <tbody class="table-body">
                 <soldOutItem class="sold-out-item" v-for="item in soldOutItems" :key="item.id" :item="item.data" :markAsProfitable="item.markAsProfitable" :markAsVeryProfitable="item.markAsVeryProfitable">
@@ -24,6 +25,7 @@
 <script>
 import SoldOutItem from '@/containers/SoldOutItem';
 import TableHeader from '@/components/TableHeader';
+import Spinner from '@/components/Spinner';
 
 import { getAccessToken, parseJSON, parseXml, removeDuplicates, dayDiff, calculateProfitMargin } from '@/Util';
 import {
@@ -68,11 +70,13 @@ function createLocationIdFilter(locationIds) {
 export default {
     components: {
         SoldOutItem,
-        TableHeader
+        TableHeader,
+        Spinner
     },
 
     data() {
         return {
+            isFetchingData: true,
             soldOutItems: [],
             headerLabels: [
                 { label: '' },
@@ -249,6 +253,7 @@ export default {
             });
 
             this.soldOutItems = await Promise.all(soldOutItems);
+            this.isFetchingData = false;
         }
     },
 

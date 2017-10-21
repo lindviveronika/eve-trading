@@ -7,8 +7,8 @@
 .spinner {
     --spinner-stroke-width: 3px;
     --spinner-size: 30px;
-    --spinner-color: #606060;
-    --spinner-background-color: #FFF;
+    --spinner-color: #00AEFF;
+    --spinner-background-color: transparent;
     --animation-speed: 1500ms;
 
     border: var(--spinner-stroke-width) solid var(--spinner-color);

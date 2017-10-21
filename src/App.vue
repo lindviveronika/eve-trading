@@ -9,7 +9,7 @@
 
     /* Resets */
     html, body {
-        height: 100%;
+        min-height: 100%;
         width: 100%;
         margin: 0;
     }
@@ -34,9 +34,9 @@
     /* End resets */
 
     body {
-        background: rgba(#151F27, 0.5);
+        background: rgba(0, 0, 0, 0.8);
         background-image: url('https://images.pexels.com/photos/134074/pexels-photo-134074.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb');
-        background-size: cover, cover;
+        background-size: cover;
         background-blend-mode: soft-light;
     }
 

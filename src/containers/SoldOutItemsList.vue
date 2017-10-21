@@ -1,5 +1,6 @@
 <template>
     <div>
+        <slot></slot>
         <spinner v-show="isFetchingData"></spinner>
         <table class="table" v-show="!isFetchingData">
             <tableHeader :headerLabels="headerLabels"></tableHeader>
@@ -18,7 +19,7 @@
 }
 
 .sold-out-item:nth-child(odd) {
-    background-color: #efefef;
+    background-color: rgba(66, 162, 245, 0.12);
 }
 </style>
 

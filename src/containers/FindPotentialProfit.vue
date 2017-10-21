@@ -1,5 +1,6 @@
 <template>
     <div>
+        <slot></slot>
         <div class="input-wrapper">
             <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
                 <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
@@ -34,7 +35,7 @@
 td {
     padding: 5px 10px 5px 0px;
     text-align: right;
-    background-color: #efefef;
+    background-color: rgba(66, 162, 245, 0.12);
 }
 
 td:first-of-type {
@@ -42,7 +43,7 @@ td:first-of-type {
 }
 
 .input-wrapper {
-    border: 2px solid #CCC;
+    border: 2px solid #00AEFF;
     border-radius: 3px;
     max-width: 600px;
     width: 100%;
@@ -52,7 +53,7 @@ td:first-of-type {
 }
 
 .search-icon {
-    fill: #888;
+    fill: #fff;
     align-self: center;
     flex: 0 1 40px;
 }
@@ -62,6 +63,12 @@ td:first-of-type {
     font-size: 14px;
     border: none;
     outline: none;
+    background-color: transparent;
+    color: #fff;
+}
+
+.input-field::placeholder {
+    color: #00AEFF;
 }
 
 .feedback-message {

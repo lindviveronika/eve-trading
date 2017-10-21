@@ -13,7 +13,10 @@
 
 <style lang="scss" scoped>
 th {
-    font-size: 16px;
+    font-family: 'Audiowide', monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
     font-weight: bold;
     padding: 5px 10px 5px 0px;
     text-align: right;

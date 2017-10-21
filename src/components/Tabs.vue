@@ -17,7 +17,6 @@
     text-transform: uppercase;
     font-family: 'Audiowide', monospace;
     letter-spacing: 1.5px;
-    background-color: rgba(0, 0, 0, 0.5);
     padding: 30px;
 }
 

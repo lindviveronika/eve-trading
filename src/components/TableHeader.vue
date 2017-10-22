@@ -11,7 +11,7 @@
     </thead>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 th {
     font-family: 'Audiowide', monospace;
     text-transform: uppercase;

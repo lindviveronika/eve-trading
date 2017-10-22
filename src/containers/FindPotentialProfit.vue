@@ -25,7 +25,7 @@
     </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 .table {
     border-collapse: collapse;
     width: 100%;
@@ -43,7 +43,7 @@ td:first-of-type {
 }
 
 .input-wrapper {
-    border: 2px solid #00AEFF;
+    border: 2px solid var(--primary-color);
     border-radius: 3px;
     max-width: 600px;
     width: 100%;
@@ -53,7 +53,7 @@ td:first-of-type {
 }
 
 .search-icon {
-    fill: #fff;
+    fill: var(--text-color-primary);
     align-self: center;
     flex: 0 1 40px;
 }
@@ -64,11 +64,11 @@ td:first-of-type {
     border: none;
     outline: none;
     background-color: transparent;
-    color: #fff;
+    color: var(--text-color-primary);
 }
 
 .input-field::placeholder {
-    color: #00AEFF;
+    color: var(--primary-color);
 }
 
 .feedback-message {

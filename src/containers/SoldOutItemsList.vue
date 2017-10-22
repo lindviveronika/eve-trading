@@ -12,7 +12,7 @@
     </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 .table {
     border-collapse: collapse;
     width: 100%;

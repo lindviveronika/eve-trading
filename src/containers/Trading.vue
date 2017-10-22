@@ -28,7 +28,7 @@
     </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 .tab-content-container {
     display: flex;
     flex-direction: column;
@@ -37,9 +37,9 @@
 
 .inner-container {
     flex: 1 1 auto;
-    margin: 10px 30px;
+    margin: 10px 1%;
     font-size: 14px;
-    color: #fff;
+    color: var(--text-color-primary);
     font-family: 'Proxima Nova', Georgia, sans-serif;
 }
 
@@ -48,8 +48,8 @@
     margin: auto;
     padding: 30px;
     background-color: rgba(66, 162, 245, 0.12);
-    border-left: 2px solid #00AEFF;
-    border-right: 2px solid #00AEFF;
+    border-left: 2px solid var(--primary-color);;
+    border-right: 2px solid var(--primary-color);;
 }
 
 .title {
@@ -60,7 +60,7 @@
     font-weight: normal;
     margin: 0 0 30px 0;
     font-size: 14px;
-    color: #00AEFF;
+    color: var(--primary-color);
 }
 </style>
 

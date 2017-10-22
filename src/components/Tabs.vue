@@ -10,7 +10,7 @@
     </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 .tab-container {
     display: flex;
     justify-content: center;
@@ -22,17 +22,17 @@
 
 .tab {
     margin: 0 25px;
-    color: white;
+    color: #FFF;
     font-size: 14px;
     cursor: pointer;
 }
 
 .tab:hover {
-    color: #00AEFF;
+    color: var(--primary-color);
 }
 
 .isActive {
-    color: #00AEFF;
+    color: var(--primary-color);
 }
 </style>
 

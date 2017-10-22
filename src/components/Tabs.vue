@@ -39,7 +39,7 @@
 <script>
 export default {
     created() {
-        this.tabs = this.$children
+        this.tabs = this.$children;
     },
 
     data() {

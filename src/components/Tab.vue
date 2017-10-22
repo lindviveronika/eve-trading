@@ -14,6 +14,10 @@ export default {
 
     name: 'Tab',
 
+    mounted() {
+        this.isActive = this.selected;
+    },
+
     props: {
         id: {
             type: String,
@@ -22,7 +26,8 @@ export default {
         title: {
             type: String,
             required: true
-        }
+        },
+        selected: false
     }
 }
 </script>

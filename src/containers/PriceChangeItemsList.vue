@@ -52,7 +52,7 @@ button:active svg {
 }
 
 .copy-icon {
-     fill: var(--text-color-primary);
+     fill: var(--primary-text-color);
 }
 </style>
 

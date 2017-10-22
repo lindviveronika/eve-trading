@@ -38,7 +38,7 @@ td:nth-of-type(2) {
 }
 
 .copy-icon {
-    fill: rgba(255, 255, 255, 0.9);
+    fill: var(--primary-text-color);
 }
 
 button:hover svg {

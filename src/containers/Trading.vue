@@ -39,7 +39,7 @@
     flex: 1 1 auto;
     margin: 10px 1%;
     font-size: 14px;
-    color: var(--text-color-primary);
+    color: var(--primary-text-color);
     font-family: 'Proxima Nova', Georgia, sans-serif;
 }
 
@@ -48,8 +48,8 @@
     margin: auto;
     padding: 30px;
     background-color: rgba(66, 162, 245, 0.12);
-    border-left: 2px solid var(--primary-color);;
-    border-right: 2px solid var(--primary-color);;
+    border-left: 2px solid var(--primary-color);
+    border-right: 2px solid var(--primary-color);
 }
 
 .title {

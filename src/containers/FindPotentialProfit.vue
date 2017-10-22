@@ -53,7 +53,7 @@ td:first-of-type {
 }
 
 .search-icon {
-    fill: var(--text-color-primary);
+    fill: var(--primary-text-color);
     align-self: center;
     flex: 0 1 40px;
 }
@@ -64,7 +64,7 @@ td:first-of-type {
     border: none;
     outline: none;
     background-color: transparent;
-    color: var(--text-color-primary);
+    color: var(--primary-text-color);
 }
 
 .input-field::placeholder {

@@ -1,7 +1,7 @@
 <template>
     <div>
         <slot></slot>
-        <spinner v-show="isFetchingData"></spinner>
+        <spinner class="spinner-icon" v-show="isFetchingData"></spinner>
         <table class="table" v-show="!isFetchingData">
             <tableHeader :headerLabels="headerLabels"></tableHeader>
             <tbody>
@@ -53,6 +53,11 @@ button:active svg {
 
 .copy-icon {
      fill: var(--primary-text-color);
+}
+
+.spinner-icon {
+    display: block;
+    margin: auto;
 }
 </style>
 

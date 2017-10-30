@@ -8,7 +8,7 @@
             </svg>
             <input class="input-field" type="text" placeholder="Search" v-model="userInput" v-on:keyup="keyUpHandler">
         </div>
-        <spinner class="spinner" v-show="isSearching"></spinner>
+        <spinner class="spinner-icon" v-show="isSearching"></spinner>
         <p v-show="feedbackMessage" class="feedback-message">{{ feedbackMessage }}</p>
         <table v-show="displayResults" class="table">
             <tableHeader :headerLabels="headerLabels"></tableHeader>
@@ -68,7 +68,7 @@ td:first-of-type {
 }
 
 .input-field::placeholder {
-    color: var(--primary-color);
+    color: var(--primary-text-color);
 }
 
 .feedback-message {
@@ -78,8 +78,10 @@ td:first-of-type {
     text-align: center;
 }
 
-.spinner {
-    margin-top: 15px;
+.spinner-icon {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
 }
 </style>
 

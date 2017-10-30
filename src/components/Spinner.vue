@@ -1,49 +1,45 @@
 <template>
-    <div class="spinner">
-    </div>
+    <svg class="spinner" viewBox="0 0 50 50">
+        <circle cx="25" cy="25" r="20" class="spinner-circle"></circle>
+    </svg>
 </template>
 
 <style>
 .spinner {
-    --spinner-stroke-width: 3px;
-    --spinner-size: 30px;
+    --animation-speed: 1.6s;
+    --spinner-stroke-width: 4px;
+    --spinner-size: 35px;
     --spinner-color: var(--primary-color);
-    --spinner-background-color: transparent;
-    --animation-speed: 1500ms;
 
-    border: var(--spinner-stroke-width) solid var(--spinner-color);
-    border-radius: 50%;
-    height: var(--spinner-size);
     width: var(--spinner-size);
-    position: relative;
-    margin: 0 auto;
+    height: var(--spinner-size);
+    animation: var(--animation-speed) rotate linear infinite;
 }
 
-.spinner:before,
-.spinner:after {
-    position: absolute;
-    background-color: var(--spinner-background-color);
-    content: '';
-    height: calc(100% + var(--spinner-stroke-width) * 2);
-    width: calc(50% + var(--spinner-stroke-width));
-    bottom: calc(var(--spinner-stroke-width) * -1);
-    animation: var(--animation-speed) spin infinite ease;
-}
-
-.spinner:before {
-    right: calc(var(--spinner-stroke-width) * -1);
-    animation-delay: calc(var(--animation-speed) / 4);
-    transform-origin: center left;
-}
-
-.spinner:after {
-    left: calc(var(--spinner-stroke-width) * -1);
-    transform-origin: center right;
+.spinner-circle {
+    stroke: var(--spinner-color);
+    stroke-width: var(--spinner-stroke-width);
+    stroke-linecap: round;
+    fill: transparent;
+    stroke-dasharray: 20, 105;
+    animation: var(--animation-speed) spin ease-in-out infinite;
 }
 
 @keyframes spin {
+    50% {
+        stroke-dashoffset: 62.5px;
+        stroke-dasharray: 105, 20;
+    }
+
     100% {
-        transform: rotate(360deg);
+        stroke-dashoffset: 125px;
+        stroke-dasharray: 20, 105;
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(-360deg);
     }
 }
 </style>

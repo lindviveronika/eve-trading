@@ -1,7 +1,7 @@
 <template>
     <div>
         <slot></slot>
-        <spinner v-show="isFetchingData"></spinner>
+        <spinner class="spinner-icon" v-show="isFetchingData"></spinner>
         <table class="table" v-show="!isFetchingData">
             <tableHeader :headerLabels="headerLabels"></tableHeader>
             <tbody class="table-body">
@@ -20,6 +20,11 @@
 
 .sold-out-item:nth-child(odd) {
     background-color: rgba(66, 162, 245, 0.12);
+}
+
+.spinner-icon {
+    display: block;
+    margin: auto;
 }
 </style>
 
